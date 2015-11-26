@@ -1,0 +1,5 @@
+export const CHANGE_PLAYER_NAME = 'CHANGE_PLAYER_NAME';
+export const MARK_PLACE = 'MARK_PLACE';
+export const START_RESET_GAME = 'START_RESET_GAME';
+
+

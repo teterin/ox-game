@@ -1,0 +1,28 @@
+.arena-container {
+  margin-top: 20px;
+}
+
+.row {
+  .cell {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: bottom;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    &:last-child {
+      border-right: none;
+    }
+    &.highlight {
+      background-color: #9f9;
+    }
+  }
+  &:last-child {
+    .cell {
+      border-bottom: none;
+    }
+  }
+}
