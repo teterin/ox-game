@@ -14,7 +14,8 @@ module.exports = {
         app: [
             'webpack-hot-middleware/client',
             './src/index.js'
-        ]
+        ],
+        vendor: ['immutable', 'react', 'react-dom', 'react-redux', 'redux'],
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
@@ -22,7 +23,8 @@ module.exports = {
             filename: 'index.html',
             template: './src/index.html'
         }),
-        new ExtractTextPlugin('style.css')
+        new ExtractTextPlugin('style.css'),
+        new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js')
     ],
     resolve: {
         extensions: ['', '.js', '.scss']
